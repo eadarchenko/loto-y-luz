@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<main>
+  <section class="hero">
+    <img
+      class="hero-image"
+      src="assets/img/nature.webp"
+      [alt]="'alt.nature' | translate"
+    />
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <span class="eyebrow">LOTO &amp; LUZ · SLOW LIVING</span>
+      <h1>{{ "hero.title" | translate }}</h1>
+      <p>{{ "hero.text" | translate }}</p>
+      <a class="button light" routerLink="/retreats"
+        >{{ "hero.cta" | translate }} <span>↗</span></a
+      >
+    </div>
+    <span class="hero-caption">{{ "hero.caption" | translate }}</span>
+  </section>
+  <section class="intro section">
+    <span class="eyebrow">{{ "intro.label" | translate }}</span>
+    <h2>{{ "intro.title" | translate }}</h2>
+    <p>{{ "intro.text" | translate }}</p>
+  </section>
+  <section class="section experiences">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">{{ "experiences.label" | translate }}</span>
+        <h2>{{ "experiences.title" | translate }}</h2>
+      </div>
+      <a routerLink="/retreats" class="text-link"
+        >{{ "experiences.link" | translate }} ↗</a
+      >
+    </div>
+    <div class="two-grid">
+      <article class="experience-card">
+        <div class="photo-carousel">
+          <img
+            [src]="images1[currentIndex1]"
+            [alt]="'alt.yoga' | translate"
+            loading="lazy"
+          />
+          <div class="carousel-controls">
+            <button
+              aria-label="Previous image"
+              (click)="moveCarousel(-1, 'carousel1')"
+            >
+              ←</button
+            ><button
+              aria-label="Next image"
+              (click)="moveCarousel(1, 'carousel1')"
+            >
+              →
+            </button>
+          </div>
+        </div>
+        <div class="card-copy">
+          <span class="eyebrow">01 / {{ "exp.one.tag" | translate }}</span>
+          <h3>{{ "exp.one.title" | translate }}</h3>
+          <p>{{ "exp.one.text" | translate }}</p>
+          <a routerLink="/procedures" class="text-link"
+            >{{ "exp.more" | translate }} ↗</a
+          >
+        </div>
+      </article>
+      <article class="experience-card">
+        <div class="photo-carousel">
+          <img
+            [src]="images2[currentIndex2]"
+            [alt]="'alt.nature' | translate"
+            loading="lazy"
+          />
+          <div class="carousel-controls">
+            <button
+              aria-label="Previous image"
+              (click)="moveCarousel(-1, 'carousel2')"
+            >
+              ←</button
+            ><button
+              aria-label="Next image"
+              (click)="moveCarousel(1, 'carousel2')"
+            >
+              →
+            </button>
+          </div>
+        </div>
+        <div class="card-copy">
+          <span class="eyebrow">02 / {{ "exp.two.tag" | translate }}</span>
+          <h3>{{ "exp.two.title" | translate }}</h3>
+          <p>{{ "exp.two.text" | translate }}</p>
+          <a routerLink="/retreats" class="text-link"
+            >{{ "exp.more" | translate }} ↗</a
+          >
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="quote-section">
+    <span class="eyebrow">{{ "quote.label" | translate }}</span>
+    <h2>{{ "quote.text" | translate }}</h2>
+    <a class="button" routerLink="/about-us"
+      >{{ "quote.cta" | translate }} ↗</a
+    >
+  </section>
+</main>
+<app-footer></app-footer>
