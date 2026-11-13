@@ -1,0 +1,56 @@
+<button
+  class="contact-fab"
+  (click)="toggleForm()"
+  [attr.aria-expanded]="showForm"
+>
+  {{ "contact.open" | translate }} ↗
+</button>
+<section
+  class="contact-panel"
+  *ngIf="showForm"
+  role="dialog"
+  [attr.aria-label]="'contact.title' | translate"
+>
+  <button class="close-contact" (click)="toggleForm()" aria-label="Close">
+    ×
+  </button>
+  <h2>{{ "contact.title" | translate }}</h2>
+  <p class="fine">{{ "contact.note" | translate }}</p>
+  <p *ngIf="submitted" class="form-success" role="status">
+    {{ "contact.success" | translate }}
+  </p>
+  <form
+    *ngIf="!submitted"
+    #demoForm="ngForm"
+    (ngSubmit)="demoForm.valid && submitForm()"
+  >
+    <label for="name">{{ "contact.name" | translate }}</label
+    ><input
+      id="name"
+      name="name"
+      [(ngModel)]="form.name"
+      required
+      maxlength="100"
+      autocomplete="off"
+    /><label for="email">{{ "contact.email" | translate }}</label
+    ><input
+      id="email"
+      name="email"
+      type="email"
+      [(ngModel)]="form.email"
+      required
+      email
+      autocomplete="off"
+    /><label for="message">{{ "contact.message" | translate }}</label
+    ><textarea
+      id="message"
+      name="message"
+      [(ngModel)]="form.message"
+      required
+      maxlength="1000"
+    ></textarea
+    ><button class="button" type="submit" [disabled]="!demoForm.valid">
+      {{ "contact.submit" | translate }}
+    </button>
+  </form>
+</section>
