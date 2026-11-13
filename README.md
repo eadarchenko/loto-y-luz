@@ -8,7 +8,7 @@ Esta versión parte de un proyecto web original de la autora y lo transforma en 
 
 ## Vista general
 
-![Inicio de Loto & Luz](docs/home-preview.jpg)
+Las capturas de escritorio y móvil se incluyen en `docs/`.
 
 ## Funciones
 
@@ -17,7 +17,7 @@ Esta versión parte de un proyecto web original de la autora y lo transforma en 
 - Navegación adaptable con menú móvil y rutas Angular con hash.
 - Carruseles de imágenes y preguntas frecuentes desplegables.
 - Formulario de demostración con validación, sin servicios externos.
-- Fotografías nuevas optimizadas en WebP y marca SVG local.
+- Fotografías nuevas optimizadas en SVG con fotografía JPEG incrustada y marca SVG local.
 
 ## Stack
 
