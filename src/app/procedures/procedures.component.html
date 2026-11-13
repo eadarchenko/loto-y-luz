@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<main class="section">
+  <div class="page-heading">
+    <span class="eyebrow">{{ "practices.label" | translate }}</span>
+    <h1>{{ "practices.title" | translate }}</h1>
+    <p>{{ "practices.text" | translate }}</p>
+  </div>
+  <div class="two-grid">
+    <article class="experience-card" *ngFor="let n of [1, 2]">
+      <img
+        class="practice-photo"
+        [src]="n === 1 ? 'assets/img/yoga.webp' : 'assets/img/spa.webp'"
+        [alt]="'practice.' + n + '.title' | translate"
+      />
+      <div class="card-copy">
+        <span class="eyebrow">0{{ n }} / LOTO &amp; LUZ</span>
+        <h2>{{ "practice." + n + ".title" | translate }}</h2>
+        <p>{{ "practice." + n + ".text" | translate }}</p>
+        <ul>
+          <li *ngFor="let i of [1, 2, 3]">
+            {{ "practice." + n + ".item" + i | translate }}
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <p class="disclaimer">{{ "practices.note" | translate }}</p>
+</main>
+<app-footer></app-footer>
