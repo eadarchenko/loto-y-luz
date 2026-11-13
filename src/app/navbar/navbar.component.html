@@ -1,0 +1,41 @@
+<div class="demo-strip">{{ "demo" | translate }}</div>
+<header class="nav-wrap">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <a class="brand" routerLink="/home"
+      ><img src="assets/img/brand.svg" alt="" /><span
+        >Loto <i>&amp;</i> Luz<small>WELLNESS RETREATS</small></span
+      ></a
+    ><button
+      class="menu-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Menu"
+    >
+      ☰
+    </button>
+    <div class="nav-links" [class.open]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active">{{
+        "nav.home" | translate
+      }}</a
+      ><a routerLink="/about-us" routerLinkActive="active">{{
+        "nav.about" | translate
+      }}</a
+      ><a routerLink="/retreats" routerLinkActive="active">{{
+        "nav.retreats" | translate
+      }}</a
+      ><a routerLink="/procedures" routerLinkActive="active">{{
+        "nav.practices" | translate
+      }}</a>
+    </div>
+    <select
+      class="language"
+      [ngModel]="selectedLanguage"
+      (ngModelChange)="changeLanguage($event)"
+      aria-label="Language"
+    >
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+      <option value="ru">RU</option>
+    </select>
+  </nav>
+</header>
