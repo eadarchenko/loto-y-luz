@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/.angular
+/.git
+/.vscode
+/coverage
+.env
+.env.*
+*.log
+*.rar
+*.zip
+.DS_Store
