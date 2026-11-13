@@ -1,0 +1,8 @@
+<section class="faq">
+  <span class="eyebrow">{{ "faq.label" | translate }}</span>
+  <h2>{{ "faq.title" | translate }}</h2>
+  <details *ngFor="let n of [1, 2, 3]">
+    <summary>{{ "faq." + n + ".q" | translate }}</summary>
+    <p>{{ "faq." + n + ".a" | translate }}</p>
+  </details>
+</section>
