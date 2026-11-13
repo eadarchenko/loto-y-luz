@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  images1 = ['assets/img/yoga.webp', 'assets/img/tea.webp'];
-  images2 = ['assets/img/nature.webp', 'assets/img/spa.webp'];
+  images1 = ['assets/img/yoga.svg', 'assets/img/tea.svg'];
+  images2 = ['assets/img/nature.svg', 'assets/img/spa.svg'];
   currentIndex1 = 0;
   currentIndex2 = 0;
   moveCarousel(step: number, id: string) {
