@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<main class="section">
+  <div class="page-heading">
+    <span class="eyebrow">{{ "retreats.label" | translate }}</span>
+    <h1>{{ "retreats.title" | translate }}</h1>
+    <p>{{ "retreats.text" | translate }}</p>
+  </div>
+  <div class="three-grid">
+    <article class="program-card" *ngFor="let p of programs">
+      <img
+        [src]="'assets/img/' + p.img + '.webp'"
+        [alt]="'program.' + p.id + '.title' | translate"
+      />
+      <div class="card-copy">
+        <span class="eyebrow">{{
+          "program." + p.id + ".tag" | translate
+        }}</span>
+        <h2>{{ "program." + p.id + ".title" | translate }}</h2>
+        <p>{{ "program." + p.id + ".text" | translate }}</p>
+        <ul>
+          <li *ngFor="let n of [1, 2, 3]">
+            {{ "program." + p.id + ".item" + n | translate }}
+          </li>
+        </ul>
+        <p class="program-note">{{ "retreats.note" | translate }}</p>
+      </div>
+    </article>
+  </div>
+  <section class="schedule">
+    <span class="eyebrow">{{ "schedule.label" | translate }}</span>
+    <h2>{{ "schedule.title" | translate }}</h2>
+    <div class="schedule-row" *ngFor="let n of [1, 2, 3, 4]">
+      <span>{{ "schedule." + n + ".time" | translate }}</span>
+      <p>{{ "schedule." + n + ".text" | translate }}</p>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>
