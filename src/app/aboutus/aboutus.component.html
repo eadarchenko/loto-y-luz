@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<main class="section">
+  <div class="page-heading">
+    <span class="eyebrow">LOTO &amp; LUZ</span>
+    <h1>{{ "about.title" | translate }}</h1>
+    <p>{{ "about.text" | translate }}</p>
+  </div>
+  <div class="two-grid about-grid">
+    <img
+      class="round-photo"
+      src="assets/img/tea.webp"
+      [alt]="'alt.tea' | translate"
+    />
+    <div>
+      <span class="eyebrow">{{ "about.label" | translate }}</span>
+      <h2>{{ "about.subtitle" | translate }}</h2>
+      <p>{{ "about.body" | translate }}</p>
+      <div class="value-row" *ngFor="let n of [1, 2, 3]">
+        <span>0{{ n }}</span>
+        <div>
+          <h3>{{ "value." + n + ".title" | translate }}</h3>
+          <p>{{ "value." + n + ".text" | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-faq></app-faq>
+</main>
+<app-footer></app-footer>
